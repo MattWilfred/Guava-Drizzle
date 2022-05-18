@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %} 
+
+{% load static %}
+
+<div class="banner">
+  <img src= "{% static 'images/banner.jpg' %}" alt="Banner" style="width:100%">
+</div>
+
+<div id="about-guava-drizzle">
+  <h1>About Guava Drizzle</h1>
+  <p>The Guava Drizzle aims to develop and deploy a web-based application in which it will assist the farmers located in Central Luzon as the vision to be an essential system for the farmers and to accomplish the mission to help provide and visualize a clear overview and prediction of the crops to plant in a soil based on the soil and meteorological conditions. </p>
+</div>
+
+<div id="significance">
+  <h1>Significance of the Application</h1>
+  <p>This application will be a benefit to the farmers in the Philippines which they will be provided an easy yet convenient access to the information and conditions of the crops in consideration of the effects it may have to plants growth and health. This application can also be benefit in increase the farmer's productivity by giving them a web-based application that will help them to reduce the workload. </p>
+</div>
+
+
+
+{% endblock %}

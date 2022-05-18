@@ -1,0 +1,167 @@
+{% extends 'base/base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %} 
+    
+
+    <section>
+                                    
+      <header>
+        <h2><a href="#" class="logo">Guava Drizzle's</a></h2>
+           
+      </header>
+      <div class="content">
+        <div class="info">
+          <h2>Guava Drizzle <br><span>Data Analytics</span></h2>
+          <p>Dhen Aaron Arellano, Irish Erika Bayubay, Gerard Bernal, Justin Henri Padunan, Dan Eric Paraguison, Matt Wilfred Salvador, Christine Meg Santos </p>
+          <a href="{% url 'predictcrop' %}" class="info-btn">Predict Crop</a>
+        <a href="{% url 'checkoptimal' %}" class="info-btn">Check Conditions</a>
+        </div>
+      </div>
+  
+    </section>
+
+  </body>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+         box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+
+    body {
+        background-image: url('mysite/static/images/bgi.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+
+    section{
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-size: cover;
+        background-position: center;
+    }
+
+    header{
+        position: relative;
+        top: 0;
+        width: 100%;
+        padding: 30px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .logo{
+        position: relative;
+        color: #fff;
+        font-size: 30px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+
+
+    .content{
+        max-width: 650px;
+        margin: 90px 350px;
+    }
+
+    .content .info h2{
+        color: #4a6c54;
+        font-size: 55px;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 2px;
+        line-height: 60px;
+        margin-bottom: 30px;
+    }
+
+    .content .info h2 span{
+        color: #fff;
+        font-size: 50px;
+        font-weight: 600;
+    }
+
+    .content .info p{
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 40px;
+    }
+
+    .content .info-btn{
+        color: #fff;
+        background: #4a6c54;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 2px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    .content .info-btn:hover{
+        background: #50755b;
+    }
+
+
+    /* Responsive styles */
+
+    @media (max-width: 960px){
+    header .navigation{
+        display: none;
+    }
+
+
+
+    header .logo{
+        position: absolute;
+        bottom: -6px;
+    }
+
+    .content .info h2{
+        font-size: 45px;
+        line-height: 50px;
+    }
+
+    .content .info h2 span{
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    .content .info p{
+        font-size: 14px;
+    }
+    }
+
+    @media (max-width: 560px){
+    .content .info h2{
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    .content .info h2 span{
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .content .info p{
+        font-size: 14px;
+    }
+    }
+    </style>
+{% endblock %}
+      

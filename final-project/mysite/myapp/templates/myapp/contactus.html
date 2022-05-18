@@ -1,0 +1,131 @@
+{% extends 'base/base.html' %}
+
+{% block title %} Contact Us {% endblock %}
+
+{% load static %}
+
+{% block content %} 
+
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+
+  .container {
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+ 
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  div.centered{
+        margin: auto;
+        width: 33.33%;
+        column-gap: 5px;
+    }
+    div.centered a{
+        padding: 10px 12px;
+        border-radius: 3px;
+        font-size: 20px;
+        color: white;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+    div.centered a:hover{
+        opacity: 0.8;
+    }
+    .fb{
+        background: #1877f2 ;
+    }
+    .insta{
+        background: #fb3958;
+    }
+    .twitter{
+        background: #00acee;
+    }
+    .linkedin{
+        background: #0e76a8;
+    }
+ 
+  
+  </style>
+  </head>
+  <body>
+    <div class="banner">
+      <img src= "{% static 'images/banner.jpg' %}" alt="Banner" style="width:100%">
+    </div>
+  
+  <div class="container">
+    <div style="text-align:center">
+      <h2>Get in Touch</h2>
+      
+    </div>
+    <div class="row">
+      <div class="column">
+        <center><h2> Contact Us</h2></center>
+        <p>Address: SLU Bakakeng</p>
+        <p>Phone Number: +6391234564</p>
+        <p>Email: 2191557@edu.ph</p> 
+        <div class="centered">
+          <a href="#" class="fb"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="insta"><i class="fa fa-instagram"></i></a>
+          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+      </div>
+ 
+      </div>
+      <div class="column">
+        
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  {% endblock %}

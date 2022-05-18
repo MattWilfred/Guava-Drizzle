@@ -1,0 +1,62 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div class="converter" id="converter">
+            <div> Select Option &nbsp&nbsp&nbsp&nbsp
+                <form method = "post" action="">
+                    {% csrf_token %}
+                    <select name ="option-cb" id="option-cb" onchange="this.form.submit()">
+                        <option value="0" disabled selected>Select an Option</option>
+                        <option value="1">Check Suitable Crop</option>
+                        <option value="2">Check Optimal Conditions</option>
+                    </select>
+                </form>
+                {% if method == 1 %}
+                    <div class="choice-1-section" id="choice-1-section">
+                        <div class="field-title"> Soil Conditions </div>
+                        <div class="field-elements"> Soil Temperature: <input type="text" class="field"></div><br>
+                        <div class="field-elements"> Nitrogen Content: <input type="text" class="field"></div><br>
+                        <div class="field-elements"> Phosphorus Content: <input type="text" class="field"></div><br>
+                        <div class="field-elements"> pH Content: <input type="text" class="field"></div><br>
+                        <div class="field-title"> Meteoroloogical Conditions </div>
+                        <div class="field-elements"> Humidity: <input type="text" class="field"></div><br>
+                        <div class="field-elements"> Rainfall: <input type="text" class="field"></div><br><hr><br>
+                
+                        <div class="choice-1-results">
+                        <div> List of Crops in Descending Order: <span> RESULTS </span> </div>
+                        </div><br><hr><br>
+                    </div>
+                {% endif %}
+                {% if method == 2 %}
+                <div class="choice-2-section" id="choice-2-section">
+                    <div class="field-elements"> </div>
+                    <div> Select Crop &nbsp&nbsp&nbsp&nbsp
+                      <select>
+                        <option value="1">Crop 1</option>
+                        <option value="2">Crop 2</option>
+                        <option value="3">Crop 3</option>
+                        <option value="4">Crop 4</option>
+                        <option value="5">Crop 5</option>
+                        <option value="6">Crop 6</option>
+                        <option value="7">Crop 7</option>
+                        <option value="8">Crop 8</option>
+                      </select>
+                    </div><br><hr><br>
+            
+                    <div class="choice-2-results">
+                      <div class="field-title"> Optimal Soil Conditions </div>
+                      <div class="field-elements"> Soil Temperature: <span class="condition-elements">RESULT</span></div><br>
+                      <div class="field-elements"> Nitrogen Content: <span class="condition-elements">RESULT</span></div><br>
+                      <div class="field-elements"> Phosphorus Content: <span class="condition-elements">RESULT</span></div><br>
+                      <div class="field-elements"> pH Content: <span class="condition-elements">RESULT</span></div><br>
+                      <div class="field-title"> Optimal Meteorological Conditions </div>
+                      <div class="field-elements"> Humidity: <span class="condition-elements">RESULT</span></div><br>
+                      <div class="field-elements"> Rainfall: <span class="condition-elements">RESULT</span></div>
+                    </div> <br><hr><br>
+                  </div>
+                {% endif %}
+            </div>
+        </div>
+    </body>
+</html>

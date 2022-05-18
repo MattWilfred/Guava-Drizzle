@@ -1,0 +1,120 @@
+{% extends 'base/base.html' %}
+
+{% block title %} About Us {% endblock %}
+
+{% load static %}
+
+{% block content %} 
+<style>
+.body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 20px;
+}
+
+</style>
+
+<body>
+<!-- Content -->
+<div class="banner">
+  <img src= "{% static 'images/banner.jpg' %}" alt="Banner" style="width:100%">
+</div>
+
+    <center> <h1>About us</h1></center>
+</div>
+<div id="mission">
+    <h2>Mission</h2>
+    <p>The mission of the Crop Visualizer Web-Based Application is to provide an application that will help the farmers in the Central Luzon to visualize and forecast which crop is best to plant in their area. The web-based application will help to predict in which crop is best to plant based on soil and meteorological conditions. It also helps in predicting what soil and meteorlogical condition is best for the crop. </p>
+    <p></p>
+</div>
+
+<div id="vision">
+    <h2>Vision</h2>
+    <p>The Crop Visualizer Web-Based Application envision to deliver a quality, progressive and satisfying service to our target customers.</p>
+</div>
+<div id="team">
+  <center> <h1>Meet The Team</h1></center>  
+</div>
+
+<table class="table table-borderless">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        
+        <td align="center"><img src="{% static 'images/devs/meg.png' %}" alt="Meg" style="width:200px"></td>
+        <td align="center"><img src="{% static 'images/devs/matt.png' %}" alt="Matt" style="width:200px"></td>
+        <td align="center"><img src="{% static 'images/devs/irish.png' %}" alt="Irish" style="width:210px"></td>
+        <td align="center"><img src="{% static 'images/devs/gerard.png' %}" alt="Gerard" style="width:200px"></td>
+      </tr>
+      <tr>
+        <td align="center">Christine Meg Santos</td>
+        <td align="center">Matt Wilfred Salvador</td>
+        <td align="center">Irish Erika Bayubay</td>
+        <td align="center">Gerard Bernal</td>
+      </tr>
+      <tr>
+        
+        <td align="center">Head Researcher</td>
+        <td align="center">Web Developer</td>
+        <td align="center">Content Manager</td>
+        <td align="center">Web Designer</td>
+      </tr>
+
+      <tr>
+        <td></td>
+        
+
+        <td align="left"><img src="{% static 'images/devs/dhen.png' %}" alt="Dhen" style="width:200px"></td>
+        <td align="left"><img src="{% static 'images/devs/dan.png' %}" alt="Dan" style="width:200px"></td>
+        <td align="left"><img src="{% static 'images/devs/justin.png' %}" alt="Justin" style="width:200px"></td>
+        <td></td>
+        <td></td>
+        
+
+      </tr>
+      <tr>
+        <td>
+
+        </td>
+        <td align="left"> Dhen Aaron Arellano</td>
+        <td align="left">Dan Eric Paraguison</td>
+        <td align="left">Justin Henri Padunan</td>
+        <td></td>
+        <td></td>
+       
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td align="left">Web Designer </td>
+        <td align="left">Website Manager</td>
+        <td align="left">Researcher</td>
+        <td></td>
+        <td>
+
+        </td>
+        
+       
+      </tr>
+
+    </tbody>
+</table>
+
+<br><br><br>
+</body>
+
+{% endblock %}

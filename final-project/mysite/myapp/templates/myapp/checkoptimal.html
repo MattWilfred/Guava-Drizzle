@@ -1,0 +1,1491 @@
+{% extends 'base/base.html' %}
+
+{% block title %} Predict Crop {% endblock %}
+
+{% block content %} 
+
+<h1>Check Optimal Conditions </h1>
+
+<!--<select id="selectCrop" name="selectCrop">
+    <option>Choose a crop</option>
+    <option value="Buko (Coconut)">Buko (Coconut)</option>
+</select>-->
+
+<script></script>
+
+<table id="Buko" class="table table-borderless">
+    <thead>
+      <tr>
+        <th scope="col">Crop Name</th>
+        <th scope="col">Soil and Atmospheric Condition</th>
+        <th scope="col">Optimal Requirement</th>
+        <th scope="col">Minimum Requirement</th>
+        <th scope="col">Maximum Requirement</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    <div class="buko">
+      <tr>
+        <td></td>
+        <td>Nitrogen (N)</td>
+        <td>21.98<div id="o-n" name="o-n"></div></td>
+        <td>0<div id="mi-n" name="mi-n"></div></td>
+        <td>40<div id="ma-n" name="ma-n"></div></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Phosphorus (P)</td>
+        <td>16.93</td>
+        <td>5</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Potassium (K)</td>
+        <td>20.59</td>
+        <td>25</td>
+        <td>35</td>
+      </tr>
+      <tr>
+        <td>Buko (Coconut)</td>
+        <td>Soil Temperature (°C)</td>
+        <td>27.41</td>
+        <td>25.01</td>
+        <td>29.87</td>
+      </tr>
+      <tr>
+        <td></td>  
+        <td>Humidity (%)</td>
+        <td>94.84</td>
+        <td>90.02</td>
+        <td>99.98</td>
+      </tr>
+      <tr>
+        <td></td>  
+        <td>pH Level</td>
+        <td>5.98</td>
+        <td>5.5</td>
+        <td>6.47</td>
+      </tr>
+      <tr>
+        <td></td>  
+        <td>Rainfall (mm)</td>
+        <td>175.69</td>
+        <td>131.09</td>
+        <td>225.63</td>
+      </tr>
+    </div>
+
+    <div class="divider"> 
+        <tr>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+
+        </tr>
+    </div>
+
+    <div class="garbanzo">
+        <tr>
+          <td></td>
+          <td>Nitrogen (N)</td>
+          <td><div id="o-n" name="o-n">40.09</div></td>
+          <td><div id="mi-n" name="mi-n">20</div></td>
+          <td><div id="ma-n" name="ma-n">60</div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Phosphorus (P)</td>
+          <td>67.79</td>
+          <td>55</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Potassium (K)</td>
+          <td>79.92</td>
+          <td>75</td>
+          <td>85</td>
+        </tr>
+        <tr>
+          <td>Garbanzo (Chickpea)</td>
+          <td>Soil Temperature (°C)</td>
+          <td>18.87</td>
+          <td>17.02</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Humidity (%)</td>
+          <td>16.86</td>
+          <td>14.26</td>
+          <td>19.97</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>pH Level</td>
+          <td>7.34</td>
+          <td>5.99</td>
+          <td>8.87</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Rainfall (mm)</td>
+          <td>80.06</td>
+          <td>65.11</td>
+          <td>94.78</td>
+        </tr>
+    </div>
+
+    <div class="divider"> 
+        <tr>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+
+        </tr>
+    </div>
+
+    <div class="granada">
+        <tr>
+          <td></td>
+          <td>Nitrogen (N)</td>
+          <td><div id="o-n" name="o-n">18.87</div></td>
+          <td><div id="mi-n" name="mi-n">0</div></td>
+          <td><div id="ma-n" name="ma-n">40</div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Phosphorus (P)</td>
+          <td>18.75</td>
+          <td>5</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Potassium (K)</td>
+          <td>40.21</td>
+          <td>35</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td>Granada (Pomegranate)</td>
+          <td>Soil Temperature (°C)</td>
+          <td>21.84</td>
+          <td>18.07</td>
+          <td>24.96</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Humidity (%)</td>
+          <td>90.13</td>
+          <td>85.13</td>
+          <td>95</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>pH Level</td>
+          <td>6.43</td>
+          <td>5.56</td>
+          <td>7.2</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Rainfall (mm)</td>
+          <td>107.53</td>
+          <td>102.52</td>
+          <td>112.48</td>
+        </tr>
+    </div>
+
+    <div class="divider"> 
+        <tr>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+
+        </tr>
+    </div>
+
+    <div class="Kadyos">
+        <tr>
+          <td></td>
+          <td>Nitrogen (N)</td>
+          <td><div id="o-n" name="o-n">20.73</div></td>
+          <td><div id="mi-n" name="mi-n">0</div></td>
+          <td><div id="ma-n" name="ma-n">40</div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Phosphorus (P)</td>
+          <td>67.73</td>
+          <td>55</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Potassium (K)</td>
+          <td>20.29</td>
+          <td>15</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>Kadyos (Pigeonpeas)</td>
+          <td>Soil Temperature (°C)</td>
+          <td>27.74</td>
+          <td>18.32</td>
+          <td>36.98</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Humidity (%)</td>
+          <td>48.06</td>
+          <td>30.40</td>
+          <td>69.69</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>pH Level</td>
+          <td>5.79</td>
+          <td>4.55</td>
+          <td>7.45</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Rainfall (mm)</td>
+          <td>149.46</td>
+          <td>90.05</td>
+          <td>198.83</td>
+        </tr>
+    </div>
+
+    <div class="divider"> 
+        <tr>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+
+        </tr>
+    </div>
+
+    <div class="Kadyos na Dilaw">
+        <tr>
+          <td></td>
+          <td>Nitrogen (N)</td>
+          <td><div id="o-n" name="o-n">18.77</div></td>
+          <td><div id="mi-n" name="mi-n">0</div></td>
+          <td><div id="ma-n" name="ma-n">40</div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Phosphorus (P)</td>
+          <td>68.36</td>
+          <td>55</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Potassium (K)</td>
+          <td>19.41</td>
+          <td>15</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>Kadyos na Dilaw (Lentil)</td>
+          <td>Soil Temperature (°C)</td>
+          <td>24.51</td>
+          <td>18.06</td>
+          <td>29.94</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Humidity (%)</td>
+          <td>64.80</td>
+          <td>60.09</td>
+          <td>69.92</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>pH Level</td>
+          <td>6.93</td>
+          <td>5.92</td>
+          <td>7.84</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Rainfall (mm)</td>
+          <td>45.68</td>
+          <td>35.03</td>
+          <td>54.94</td>
+        </tr>
+    </div>
+
+    <div class="divider"> 
+        <tr>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+
+        </tr>
+    </div>
+
+    <div class="Kape">
+        <tr>
+          <td></td>
+          <td>Nitrogen (N)</td>
+          <td><div id="o-n" name="o-n">101.2</div></td>
+          <td><div id="mi-n" name="mi-n">80</div></td>
+          <td><div id="ma-n" name="ma-n">120</div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Phosphorus (P)</td>
+          <td>28.74</td>
+          <td>15</td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Potassium (K)</td>
+          <td>29.94</td>
+          <td>25</td>
+          <td>35</td>
+        </tr>
+        <tr>
+          <td>Kape (Coffee)</td>
+          <td>Soil Temperature (°C)</td>
+          <td>25.54</td>
+          <td>23.06</td>
+          <td>27.92</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Humidity (%)</td>
+          <td>58.87</td>
+          <td>50.05</td>
+          <td>69.95</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>pH Level</td>
+          <td>6.79</td>
+          <td>6.02</td>
+          <td>7.49</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Rainfall (mm)</td>
+          <td>158.07</td>
+          <td>115.16</td>
+          <td>199.47</td>
+        </tr>
+    </div>
+
+    <div class="divider"> 
+        <tr>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+
+        </tr>
+    </div>
+
+    <div class="Mais">
+        <tr>
+          <td></td>
+          <td>Nitrogen (N)</td>
+          <td><div id="o-n" name="o-n">77.76</div></td>
+          <td><div id="mi-n" name="mi-n">60</div></td>
+          <td><div id="ma-n" name="ma-n">100</div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Phosphorus (P)</td>
+          <td>48.44</td>
+          <td>35</td>
+          <td>60</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Potassium (K)</td>
+          <td>19.79</td>
+          <td>15</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>Mais (Maize)</td>
+          <td>Soil Temperature (°C)</td>
+          <td>22.39</td>
+          <td>18.04</td>
+          <td>26.55</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Humidity (%)</td>
+          <td>65.09</td>
+          <td>55.28</td>
+          <td>74.83</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>pH Level</td>
+          <td>6.25</td>
+          <td>5.51</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Rainfall (mm)</td>
+          <td>84.77</td>
+          <td>60.65</td>
+          <td>109.75</td>
+        </tr>
+    </div>
+
+    <div class="divider"> 
+        <tr>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+
+        </tr>
+    </div>
+
+    <div class="Mangga">
+        <tr>
+          <td></td>
+          <td>Nitrogen (N)</td>
+          <td><div id="o-n" name="o-n">20.07</div></td>
+          <td><div id="mi-n" name="mi-n">0</div></td>
+          <td><div id="ma-n" name="ma-n">40</div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Phosphorus (P)</td>
+          <td>27.18</td>
+          <td>15</td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Potassium (K)</td>
+          <td>29.92</td>
+          <td>25</td>
+          <td>35</td>
+        </tr>
+        <tr>
+          <td>Mangga (Mango)</td>
+          <td>Soil Temperature (°C)</td>
+          <td>31.21</td>
+          <td>27</td>
+          <td>35.99</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Humidity (%)</td>
+          <td>50.16</td>
+          <td>45.02</td>
+          <td>54.96</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>pH Level</td>
+          <td>5.77</td>
+          <td>4.51</td>
+          <td>6.97</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Rainfall (mm)</td>
+          <td>94.70</td>
+          <td>89.29</td>
+          <td>100.81</td>
+        </tr>
+    </div>
+
+    <div class="divider"> 
+        <tr>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+
+        </tr>
+    </div>
+
+    <div class="Mansanas">
+        <tr>
+          <td></td>
+          <td>Nitrogen (N)</td>
+          <td><div id="o-n" name="o-n">20.8</div></td>
+          <td><div id="mi-n" name="mi-n">0</div></td>
+          <td><div id="ma-n" name="ma-n">40</div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Phosphorus (P)</td>
+          <td>134.22</td>
+          <td>120</td>
+          <td>145</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Potassium (K)</td>
+          <td>199.89</td>
+          <td>195</td>
+          <td>205</td>
+        </tr>
+        <tr>
+          <td>Mansanas (Apple)</td>
+          <td>Soil Temperature (°C)</td>
+          <td>22.63</td>
+          <td>21.04</td>
+          <td>24</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Humidity (%)</td>
+          <td>92.33</td>
+          <td>90.03</td>
+          <td>94.92</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>pH Level</td>
+          <td>5.93</td>
+          <td>5.51</td>
+          <td>6.50</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Rainfall (mm)</td>
+          <td>112.65</td>
+          <td>100.12</td>
+          <td>124.98</td>
+        </tr>
+    </div>
+
+    <div class="divider"> 
+        <tr>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+
+        </tr>
+    </div>
+
+    <div class="Melon">
+        <tr>
+          <td></td>
+          <td>Nitrogen (N)</td>
+          <td><div id="o-n" name="o-n">100.32</div></td>
+          <td><div id="mi-n" name="mi-n">80</div></td>
+          <td><div id="ma-n" name="ma-n">120</div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Phosphorus (P)</td>
+          <td>17.72</td>
+          <td>5</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Potassium (K)</td>
+          <td>50.08</td>
+          <td>45</td>
+          <td>55</td>
+        </tr>
+        <tr>
+          <td>Melon (Muskmelon)</td>
+          <td>Soil Temperature (°C)</td>
+          <td>28.66</td>
+          <td>27.02</td>
+          <td>29.94</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Humidity (%)</td>
+          <td>92.34</td>
+          <td>90.02</td>
+          <td>94.96</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>pH Level</td>
+          <td>6.36</td>
+          <td>6</td>
+          <td>6.78</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Rainfall (mm)</td>
+          <td>24.69</td>
+          <td>20.21</td>
+          <td>29.87</td>
+        </tr>
+    </div>
+
+    <div class="divider"> 
+        <tr>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+
+        </tr>
+    </div>
+
+    <div class="Monggo">
+        <tr>
+          <td></td>
+          <td>Nitrogen (N)</td>
+          <td><div id="o-n" name="o-n">20.99</div></td>
+          <td><div id="mi-n" name="mi-n">0</div></td>
+          <td><div id="ma-n" name="ma-n">40</div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Phosphorus (P)</td>
+          <td>47.28</td>
+          <td>35</td>
+          <td>60</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Potassium (K)</td>
+          <td>19.87</td>
+          <td>15</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>Monggo (Mungbean)</td>
+          <td>Soil Temperature (°C)</td>
+          <td>28.53</td>
+          <td>27.01</td>
+          <td>29.91</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Humidity (%)</td>
+          <td>85.50</td>
+          <td>80.03</td>
+          <td>90</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>pH Level</td>
+          <td>6.72</td>
+          <td>6.22</td>
+          <td>7.20</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Rainfall (mm)</td>
+          <td>48.40</td>
+          <td>36.12</td>
+          <td>59.87</td>
+        </tr>
+    </div>
+
+    <div class="divider"> 
+        <tr>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+
+        </tr>
+    </div>
+
+    <div class="Pakwan">
+        <tr>
+          <td></td>
+          <td>Nitrogen (N)</td>
+          <td><div id="o-n" name="o-n">99.42</div></td>
+          <td><div id="mi-n" name="mi-n">80</div></td>
+          <td><div id="ma-n" name="ma-n">120</div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Phosphorus (P)</td>
+          <td>17</td>
+          <td>5</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Potassium (K)</td>
+          <td>50.22</td>
+          <td>45</td>
+          <td>55</td>
+        </tr>
+        <tr>
+          <td> Pakwan (Watermelon)</td>
+          <td>Soil Temperature (°C)</td>
+          <td>25.59</td>
+          <td>24.04</td>
+          <td>26.99</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Humidity (%)</td>
+          <td>85.16</td>
+          <td>80.03</td>
+          <td>89.98</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>pH Level</td>
+          <td>6.50</td>
+          <td>6</td>
+          <td>6.96</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Rainfall (mm)</td>
+          <td>50.79</td>
+          <td>40.13</td>
+          <td>59.76</td>
+        </tr>
+    </div>
+
+    <div class="divider"> 
+        <tr>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+
+        </tr>
+    </div>
+
+    <div class="Palay">
+        <tr>
+          <td></td>
+          <td>Nitrogen (N)</td>
+          <td><div id="o-n" name="o-n">79.89</div></td>
+          <td><div id="mi-n" name="mi-n">60</div></td>
+          <td><div id="ma-n" name="ma-n">99</div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Phosphorus (P)</td>
+          <td>47.58</td>
+          <td>35</td>
+          <td>60</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Potassium (K)</td>
+          <td>39.87</td>
+          <td>35</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td>Palay (Rice)</td>
+          <td>Soil Temperature (°C)</td>
+          <td>23.69</td>
+          <td>20.05</td>
+          <td>26.93</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Humidity (%)</td>
+          <td>82.27</td>
+          <td>80.12</td>
+          <td>84.97</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>pH Level</td>
+          <td>6.43</td>
+          <td>5.01</td>
+          <td>7.87</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Rainfall (mm)</td>
+          <td>236.18</td>
+          <td>182.56</td>
+          <td>298.56</td>
+        </tr>
+    </div>
+
+    <div class="divider"> 
+        <tr>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+
+        </tr>
+    </div>
+
+    <div class="Papaya">
+        <tr>
+          <td></td>
+          <td>Nitrogen (N)</td>
+          <td><div id="o-n" name="o-n">49.88</div></td>
+          <td><div id="mi-n" name="mi-n">31</div></td>
+          <td><div id="ma-n" name="ma-n">70</div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Phosphorus (P)</td>
+          <td>59.05</td>
+          <td>46</td>
+          <td>70</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Potassium (K)</td>
+          <td>50.04</td>
+          <td>45</td>
+          <td>55</td>
+        </tr>
+        <tr>
+          <td>Papaya (Papaya)</td>
+          <td>Soil Temperature (°C)</td>
+          <td>33.72</td>
+          <td>23.01</td>
+          <td>43.68</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Humidity (%)</td>
+          <td>92.40</td>
+          <td>90.04</td>
+          <td>94.94</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>pH Level</td>
+          <td>6.74</td>
+          <td>6.50</td>
+          <td>6.99</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Rainfall (mm)</td>
+          <td>142.63</td>
+          <td>40.35</td>
+          <td>248.86</td>
+        </tr>
+    </div>
+
+    <div class="divider"> 
+        <tr>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+
+        </tr>
+    </div>
+
+    <div class="Patani">
+        <tr>
+          <td></td>
+          <td>Nitrogen (N)</td>
+          <td><div id="o-n" name="o-n">20.75</div></td>
+          <td><div id="mi-n" name="mi-n">0</div></td>
+          <td><div id="ma-n" name="ma-n">40</div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Phosphorus (P)</td>
+          <td>67.54</td>
+          <td>55</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Potassium (K)</td>
+          <td>20.05</td>
+          <td>15</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>Patani (Kidneybeans)</td>
+          <td>Soil Temperature (°C)</td>
+          <td>20.12</td>
+          <td>15.33</td>
+          <td>24.92</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Humidity (%)</td>
+          <td>21.61</td>
+          <td>18.09</td>
+          <td>24.97</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>pH Level</td>
+          <td>5.75</td>
+          <td>5.50</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Rainfall (mm)</td>
+          <td>105.92</td>
+          <td>60.28</td>
+          <td>149.74</td>
+        </tr>
+    </div>
+
+    <div class="divider"> 
+        <tr>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+
+        </tr>
+    </div>
+
+    <div class="Ponkan">
+        <tr>
+          <td></td>
+          <td>Nitrogen (N)</td>
+          <td><div id="o-n" name="o-n">19.58</div></td>
+          <td><div id="mi-n" name="mi-n">0</div></td>
+          <td><div id="ma-n" name="ma-n">40</div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Phosphorus (P)</td>
+          <td>16.55</td>
+          <td>5</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Potassium (K)</td>
+          <td>10.01</td>
+          <td>5</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>Ponkan (Orange)</td>
+          <td>Soil Temperature (°C)</td>
+          <td>22.77</td>
+          <td>10.01</td>
+          <td>34.91</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Humidity (%)</td>
+          <td>92.17</td>
+          <td>90.01</td>
+          <td>94.96</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>pH Level</td>
+          <td>7.02</td>
+          <td>6.01</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Rainfall (mm)</td>
+          <td>110.47</td>
+          <td>100.17</td>
+          <td>119.69</td>
+        </tr>
+    </div>
+
+    <div class="divider"> 
+        <tr>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+
+        </tr>
+    </div>
+
+    <div class="Saging">
+        <tr>
+          <td></td>
+          <td>Nitrogen (N)</td>
+          <td><div id="o-n" name="o-n">100.23</div></td>
+          <td><div id="mi-n" name="mi-n">80</div></td>
+          <td><div id="ma-n" name="ma-n">120</div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Phosphorus (P)</td>
+          <td>80.01</td>
+          <td>70</td>
+          <td>95</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Potassium (K)</td>
+          <td>50.05</td>
+          <td>45</td>
+          <td>55</td>
+        </tr>
+        <tr>
+          <td>Saging (Banana))</td>
+          <td>Soil Temperature (°C)</td>
+          <td>27.38</td>
+          <td>25.01</td>
+          <td>29.91</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Humidity (%)</td>
+          <td>80.36</td>
+          <td>75.03</td>
+          <td>84.98</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>pH Level</td>
+          <td>5.98</td>
+          <td>5.51</td>
+          <td>6.49</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Rainfall (mm)</td>
+          <td>104.63</td>
+          <td>90.11</td>
+          <td>119.85</td>
+        </tr>
+    </div>
+
+    <div class="divider"> 
+        <tr>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+
+        </tr>
+    </div>
+
+    <div class="Saluyot">
+        <tr>
+          <td></td>
+          <td>Nitrogen (N)</td>
+          <td><div id="o-n" name="o-n">78.4</div></td>
+          <td><div id="mi-n" name="mi-n">60</div></td>
+          <td><div id="ma-n" name="ma-n">100</div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Phosphorus (P)</td>
+          <td>46.86</td>
+          <td>35</td>
+          <td>60</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Potassium (K)</td>
+          <td>39.99</td>
+          <td>35</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td>Saluyot (Jute)</td>
+          <td>Soil Temperature (°C)</td>
+          <td>24.96</td>
+          <td>23.09</td>
+          <td>26.99</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Humidity (%)</td>
+          <td>79.64</td>
+          <td>70.88</td>
+          <td>89.89</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>pH Level</td>
+          <td>6.73</td>
+          <td>6</td>
+          <td>7.49</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Rainfall (mm)</td>
+          <td>174.79</td>
+          <td>150.24</td>
+          <td>199.84</td>
+        </tr>
+    </div>
+
+    <div class="divider"> 
+        <tr>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+
+        </tr>
+    </div>
+
+    <div class="Tarragon">
+        <tr>
+          <td></td>
+          <td>Nitrogen (N)</td>
+          <td><div id="o-n" name="o-n">21.44</div></td>
+          <td><div id="mi-n" name="mi-n">0</div></td>
+          <td><div id="ma-n" name="ma-n">40</div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Phosphorus (P)</td>
+          <td>48.01</td>
+          <td>35</td>
+          <td>60</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Potassium (K)</td>
+          <td>20.23</td>
+          <td>15</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>Tarragon (Mothbeans)</td>
+          <td>Soil Temperature (°C)</td>
+          <td>28.19</td>
+          <td>24.02</td>
+          <td>32</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Humidity (%)</td>
+          <td>53.16</td>
+          <td>40.01</td>
+          <td>64.96</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>pH Level</td>
+          <td>6.83</td>
+          <td>3.50</td>
+          <td>9.94</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Rainfall (mm)</td>
+          <td>51.20</td>
+          <td>30.92</td>
+          <td>74.44</td>
+        </tr>
+    </div>
+
+    <div class="divider"> 
+        <tr>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+
+        </tr>
+    </div>
+
+    <div class="Ubas">
+        <tr>
+          <td></td>
+          <td>Nitrogen (N)</td>
+          <td><div id="o-n" name="o-n">23.18</div></td>
+          <td><div id="mi-n" name="mi-n">0</div></td>
+          <td><div id="ma-n" name="ma-n">40</div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Phosphorus (P)</td>
+          <td>132.53</td>
+          <td>120</td>
+          <td>145</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Potassium (K)</td>
+          <td>200.11</td>
+          <td>195</td>
+          <td>205</td>
+        </tr>
+        <tr>
+          <td>Ubas (Grapes)</td>
+          <td>Soil Temperature (°C)</td>
+          <td>23.85</td>
+          <td>8.83</td>
+          <td>41.95</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Humidity (%)</td>
+          <td>81.88</td>
+          <td>80.02</td>
+          <td>83.98</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>pH Level</td>
+          <td>6.03</td>
+          <td>5.51</td>
+          <td>6.50</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Rainfall (mm)</td>
+          <td>69.61</td>
+          <td>65.01</td>
+          <td>74.92</td>
+        </tr>
+    </div>
+
+    <div class="divider"> 
+        <tr>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+
+        </tr>
+    </div>
+
+    <div class="Vigna Mongo">
+        <tr>
+          <td></td>
+          <td>Nitrogen (N)</td>
+          <td><div id="o-n" name="o-n">40.02</div></td>
+          <td><div id="mi-n" name="mi-n">20</div></td>
+          <td><div id="ma-n" name="ma-n">60</div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Phosphorus (P)</td>
+          <td>67.47</td>
+          <td>55</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Potassium (K)</td>
+          <td>19.24</td>
+          <td>15</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>Vigna Mongo (Blackgram)</td>
+          <td>Soil Temperature (°C)</td>
+          <td>29.97</td>
+          <td>25.10</td>
+          <td>34.95</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Humidity (%)</td>
+          <td>65.12</td>
+          <td>60.07</td>
+          <td>69.96</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>pH Level</td>
+          <td>7.13</td>
+          <td>6.50</td>
+          <td>7.78</td>
+        </tr>
+        <tr>
+          <td></td>  
+          <td>Rainfall (mm)</td>
+          <td>67.88</td>
+          <td>60.42</td>
+          <td>74.92</td>
+        </tr>
+    </div>
+
+    <div class="divider"> 
+        <tr>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+            <td><hr></td>
+
+        </tr>
+    </div>
+
+    </tbody>
+</table>
+
+<hr>
+
+<script>
+     window.onload = function(){
+        var select = document.getElementById("selectCrop");
+        var options = ['Buko (Coconut)','Garbanzo (Chickpea)','Granada (Pomegranate)','Kadyos (Pigeonpeas)','Kadyos na Dilaw (Lentil)','Kape (Coffee)','Mais (Maize)','Mangga (Mango)','Mansanas (Apple)','Melon (Muskmelon)','Monggo (Mungbean)','Pakwan (Watermelon)','Palay (Rice)','Papaya (Papaya)','Patani (Kidneybeans)','Ponkan (Orange)','Saging (Banana)','Saluyot (Jute)','Tarragon (Mothbeans)','Ubas (Grapes)','Vigna Mungo (Blackgram)'];
+
+        /**for(var i = 0; i < options.length; i++) {
+            var opt = options[i];
+            var el = document.createElement("option");
+            el.textContent = opt;
+            el.value = opt;
+            select.appendChild(el);
+        }**/
+    }
+</script>
+
+<script>
+
+    document.getElementById("selectCrop").addEventListener('onchange',function()  { 
+        var select = document.getElementById("selectCrop");
+        var s2 = document.getElementById("o-n");
+        var s3 = document.getElementById("mi-n");
+        var s4 = document.getElementById("ma-n");
+
+        console.log(selectCrop);
+
+        var optionArray = [0,40,21.98,5,30,16.93,25,25,20.59,25.01,29.87,27.41,90.02,99.98,94.84,5.5,6.47,5.98,131.09,225.63,175.69];
+
+        var v = select.value
+
+        if(v === "Buko (Coconut)"){
+
+            for(var i = 0; i < optionArray.size; i++) {
+                s2.innerHTML = optionArray[1];
+                s3.innerHTML = "1";
+                s4.innerHTML = optionArray[4];
+            }
+
+        } else {
+            console.log("null")
+        };
+    });
+</script>
+
+<!--<div class="conditions">
+    <div></div>
+    <div>Optimal Nitrogen (N) Requirement &nbsp&nbsp&nbsp<input type="text" name="Nitrogen (N)" id=""></div>
+    <div>Optimal Phosphorus (P) Requirement<input type="text" name="Phosphorus (P)" id=""></div>
+    <div>Optimal Potassium (K) Requirement<input type="text" name="Potassium (K)" id=""></div>
+    <div> Optimal Soil Temperature (°C)<input type="text" name="Soil Temperature (°C)" id=""></div>
+    <div>Optimal Humidity (%)<input type="text" name="Humidity (%)" id=""></div>
+    <div>Optimal pH<input type="text" name="pH" id=""></div>
+    <div>Optimal Rainfall (mm)<input type="text" name="Rainfall (mm)" id=""></div>
+</div>-->
+
+
+
+
+
+<script>
+    var optimalconditionsCSV = `crop,min_N,max_N,ave_N,min_P,max_P,ave_P,min_K,max_K,ave_K,min_temperature,max_temperature,ave_temperature,min_humidity,max_humidity,ave_humidity,min_pH,max_pH,ave_pH,min_Rainfall (mm),max_Rainfall (mm),ave_Rainfall (mm)
+Buko (Coconut),0,40,21.98,5,30,16.93,25,25,20.59,25.01,29.87,27.41,90.02,99.98,94.84,5.5,6.47,5.98,131.09,225.63,175.69
+Garbanzo (Chickpea),20,60,40.09,55,80,67.79,75,85,79.92,17.02,21,18.87,14.26,19.97,16.86,5.99,8.87,7.34,65.11,94.78,80.06
+Granada (Pomegranate),0,40,18.87,5,30,18.87,35,45,40.21,18.07,24.96,21.84,85.13,95,90.13,5.56,7.2,6.43,102.52,112.48,107.53
+Kadyos (Pigeonpeas),0,40,20.73,55,80,67.73,15,25,20.29,18.32,36.98,27.74,30.4,69.69,48.06,4.55,7.45,5.79,90.05,198.83,149.46
+Kadyos na Dilaw (Lentil),0,40,18.77,55,80,68.36,15,25,19.41,18.06,29.94,24.51,60.09,69.92,64.8,5.92,7.84,6.93,35.03,54.94,45.68
+Kape (Coffee),80,120,101.2,15,40,28.74,25,35,29.94,23.06,27.92,25.54,50.05,69.95,58.87,6.02,7.49,6.79,115.16,199.47,158.07
+Mais (Maize),60,100,77.76,35,60,48.44,15,25,19.79,18.04,26.55,22.39,55.28,74.83,65.09,5.51,7,6.25,60.65,109.75,84.77
+Mangga (Mango),0,40,20.07,15,40,27.18,25,35,29.92,27,35.99,31.21,45.02,54.96,50.16,4.51,6.97,5.77,89.29,100.81,94.7
+Mansanas (Apple),0,40,20.8,120,145,134.22,195,205,199.89,21.04,24,22.63,90.3,94.92,92.33,5.51,6.5,5.93,100.12,124.98,112.65
+Melon (Muskmelon),80,120,100.32,5,30,17.72,45,55,50.08,27.02,29.94,28.66,90.02,94.96,92.34,6,6.78,6.36,20.21,29.87,24.69
+Monggo (Mungbean),0,40,20.99,35,60,47.28,15,25,19.87,27.01,29.91,28.53,80.03,90,85.5,6.22,7.2,6.72,36.12,59.87,48.4
+Pakwan (Watermelon),80,120,99.42,5,30,17,45,55,50.22,24.04,26.99,25.59,80.03,89.98,85.16,6,6.96,6.5,40.13,59.76,50.79
+Palay (Rice),60,99,79.89,35,60,47.58,35,45,39.87,20.05,23.69,23.69,80.12,84.97,82.27,5.01,7.87,6.43,182.56,298.56,236.18
+Papaya (Papaya),31,70,49.88,46,70,59.05,45,55,50.04,23.01,43.68,33.72,90.04,94.94,92.4,6.5,6.99,6.74,40.35,248.86,142.63
+Patani (Kidneybeans),0,40,20.75,55,80,67.54,15,25,20.05,15.33,24.92,20.12,18.09,24.96,21.61,5.5,6,5.75,60.28,149.74,105.92
+Ponkan (Orange),0,40,19.58,5,30,16.55,5,15,10.01,10.01,34.91,22.77,90.01,94.96,92.17,6.01,8,7.02,100.17,119.69,110.47
+Saging (Banana),80,120,100.23,70,95,82.01,45,55,50.05,25.01,29.91,27.38,75.03,84.98,80.36,5.51,6.49,5.98,90.11,119.85,104.63
+Saluyot (Jute),60,100,78.4,35,60,46.86,35,45,39.99,23.09,26.99,24.96,70.88,89.89,79.64,6,7.49,6.73,150.24,199.84,174.79
+Tarragon (Mothbeans),0,40,21.44,35,60,48.01,15,25,20.23,24.02,32,28.19,40.01,64.96,53.16,3.5,9.94,6.83,30.92,74.44,51.2
+Ubas (Grapes),0,40,23.18,120,145,132.53,195,205,200.11,8.83,41.95,23.85,80.02,83.98,81.88,5.51,6.5,6.03,65.01,74.92,69.61
+Vigna Mungo (Blackgram),20,60,40.02,55,80,67.47,15,25,19.24,25.1,34.95,29.97,60.07,69.96,65.12,6.5,7.78,7.13,60.42,74.92,67.88
+`
+
+
+
+console.log(optimalconditionsCSV.split("\n"))
+
+
+/**Buko(Coconut),0,40,21.98,5,30,16.93,25,25,20.59,25.01,29.87,27.41,90.02,99.98,94.84,5.5,6.47,5.98,131.09,225.63,175.69
+Garbanzo (Chickpea),20,60,40.09,55,80,67.79,75,85,79.92,17.02,21,18.87,14.26,19.97,16.86,5.99,8.87,7.34,65.11,94.78,80.06
+Granada (Pomegranate),0,40,18.87,5,30,18.87,35,45,40.21,18.07,24.96,21.84,85.13,95,90.13,5.56,7.2,6.43,102.52,112.48,107.53
+Kadyos (Pigeonpeas),0,40,20.73,55,80,67.73,15,25,20.29,18.32,36.98,27.74,30.4,69.69,48.06,4.55,7.45,5.79,90.05,198.83,149.46
+Kadyos na Dilaw (Lentil),0,40,18.77,55,80,68.36,15,25,19.41,18.06,29.94,24.51,60.09,69.92,64.8,5.92,7.84,6.93,35.03,54.94,45.68
+Kape (Coffee),80,120,101.2,15,40,28.74,25,35,29.94,23.06,27.92,25.54,50.05,69.95,58.87,6.02,7.49,6.79,115.16,199.47,158.07
+Mais (Maize),60,100,77.76,35,60,48.44,15,25,19.79,18.04,26.55,22.39,55.28,74.83,65.09,5.51,7,6.25,60.65,109.75,84.77
+Mangga (Mango),0,40,20.07,15,40,27.18,25,35,29.92,27,35.99,31.21,45.02,54.96,50.16,4.51,6.97,5.77,89.29,100.81,94.7
+Mansanas (Apple),0,40,20.8,120,145,134.22,195,205,199.89,21.04,24,22.63,90.3,94.92,92.33,5.51,6.5,5.93,100.12,124.98,112.65
+Melon (Muskmelon),80,120,100.32,5,30,17.72,45,55,50.08,27.02,29.94,28.66,90.02,94.96,92.34,6,6.78,6.36,20.21,29.87,24.69
+Monggo (Mungbean),0,40,20.99,35,60,47.28,15,25,19.87,27.01,29.91,28.53,80.03,90,85.5,6.22,7.2,6.72,36.12,59.87,48.4
+Pakwan (Watermelon),80,120,99.42,5,30,17,45,55,50.22,24.04,26.99,25.59,80.03,89.98,85.16,6,6.96,6.5,40.13,59.76,50.79
+Palay (Rice),60,99,79.89,35,60,47.58,35,45,39.87,20.05,23.69,23.69,80.12,84.97,82.27,5.01,7.87,6.43,182.56,298.56,236.18
+Papaya (Papaya),31,70,49.88,46,70,59.05,45,55,50.04,23.01,43.68,33.72,90.04,94.94,92.4,6.5,6.99,6.74,40.35,248.86,142.63
+Patani (Kidneybeans),0,40,20.75,55,80,67.54,15,25,20.05,15.33,24.92,20.12,18.09,24.96,21.61,5.5,6,5.75,60.28,149.74,105.92
+Ponkan (Orange),0,40,19.58,5,30,16.55,5,15,10.01,10.01,34.91,22.77,90.01,94.96,92.17,6.01,8,7.02,100.17,119.69,110.47
+Saging (Banana),80,120,100.23,70,95,82.01,45,55,50.05,25.01,29.91,27.38,75.03,84.98,80.36,5.51,6.49,5.98,90.11,119.85,104.63
+Saluyot (Jute),60,100,78.4,35,60,46.86,35,45,39.99,23.09,26.99,24.96,70.88,89.89,79.64,6,7.49,6.73,150.24,199.84,174.79
+Tarragon (Mothbeans),0,40,21.44,35,60,48.01,15,25,20.23,24.02,32,28.19,40.01,64.96,53.16,3.5,9.94,6.83,30.92,74.44,51.2
+Ubas (Grapes),0,40,23.18,120,145,132.53,195,205,200.11,8.83,41.95,23.85,80.02,83.98,81.88,5.51,6.5,6.03,65.01,74.92,69.61
+Vigna Mungo (Blackgram),20,60,40.02,55,80,67.47,15,25,19.24,25.1,34.95,29.97,60.07,69.96,65.12,6.5,7.78,7.13,60.42,74.92,67.88
+**/
+
+</script>
+
+
+{% endblock %}

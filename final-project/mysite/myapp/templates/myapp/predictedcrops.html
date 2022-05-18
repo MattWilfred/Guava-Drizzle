@@ -1,0 +1,43 @@
+{% extends 'base/base.html' %}
+
+{% block title %} Predicted Crops {% endblock %}
+
+
+{% block content %} 
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-md-8 offset-md2">
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nitrogen</th>
+                    <th scope="col">Phosphorus</th>
+                    <th scope="col">Potassium</th>
+                    <th scope="col">Temperature</th>
+                    <th scope="col">Humidity</th>
+                    <th scope="col">pH</th>
+                    <th scope="col">Rainfall</th>
+                    <th scope="col">Prediction</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for data in predicted_crops %}
+                  <tr>
+                    <th scope="row">{{ data.id }}</th>
+                    <td>{{ data.nitrogen }}</td>
+                    <td>{{ data.phosphorus }}</td>
+                    <td>{{ data.potassium }}</td>
+                    <td>{{ data.temperature }}</td>
+                    <td>{{ data.humidity }}</td>
+                    <td>{{ data.ph }}</td>
+                    <td>{{ data.rainfall }}</td>
+                    <td>{{ data.predicted_crop }}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
